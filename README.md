@@ -8,6 +8,9 @@ also trained on new translations as they are added**.
 \*"Default" translations only  
 \*\*Changes to translations are ignored
 
+## Requirements
+OmegaT 3.5 or newer (only tested on trunk)
+
 ## Obtaining
 Download the JAR from [Releases]
 (https://github.com/amake/omegat-markov-completer/releases) or build yourself.
