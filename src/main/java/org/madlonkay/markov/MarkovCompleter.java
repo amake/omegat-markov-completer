@@ -76,6 +76,7 @@ public class MarkovCompleter extends AutoCompleterListView {
     }
     
     private void train() {
+        data.clear();
         Core.getProject().iterateByDefaultTranslations(new DefaultTranslationsIterator() {
             @Override
             public void iterate(String source, TMXEntry trans) {
