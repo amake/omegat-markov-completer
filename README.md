@@ -1,6 +1,8 @@
 # omegat-markov-completer
 An autocompleter view backed by a Markov Generator (yes, it's a joke)
 
+![screenshot](https://amake.github.io/omegat-markov-completer/screenshot.png)
+
 This autocompleter view generates suggestions via an order-5 (in characters)
 Markov generator trained on all existing translations* in the project. It is
 also trained on new translations as they are added**.
