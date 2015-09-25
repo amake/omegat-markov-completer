@@ -4,7 +4,7 @@
   <groupId>org.omegat.plugin.markov</groupId>
   <artifactId>omegat-markov-completer</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>omegat-markov-completer</name>
   <url>http://maven.apache.org</url>
   <properties>
