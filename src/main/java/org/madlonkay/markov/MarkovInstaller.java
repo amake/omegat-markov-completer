@@ -22,6 +22,8 @@ import org.omegat.core.machinetranslators.BaseTranslate;
 import org.omegat.util.Language;
 
 public class MarkovInstaller extends BaseTranslate {
+    
+    static final String MARKOV_TRANSLATOR_PREFERENCE = "allow_markov_translator";
 
     public MarkovInstaller() {
         Core.getEditor().getAutoCompleter().addView(new MarkovCompleter());
@@ -33,7 +35,7 @@ public class MarkovInstaller extends BaseTranslate {
 
     @Override
     protected String getPreferenceName() {
-        return "allow_markov_translator";
+        return MARKOV_TRANSLATOR_PREFERENCE;
     }
 
     @Override

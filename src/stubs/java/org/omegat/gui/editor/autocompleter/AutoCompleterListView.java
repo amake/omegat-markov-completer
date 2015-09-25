@@ -9,4 +9,7 @@ public abstract class AutoCompleterListView extends AbstractAutoCompleterView {
     
     public abstract List<AutoCompleterItem> computeListData(String prevText, boolean contextualOnly);
     public abstract String itemToString(AutoCompleterItem item);
+    public boolean shouldPopUp() {
+        return false;
+    }
 }

@@ -9,4 +9,6 @@ public abstract class AbstractAutoCompleterView {
     public ITokenizer getTokenizer() {
         return null;
     }
+    
+    public abstract boolean shouldPopUp();
 }

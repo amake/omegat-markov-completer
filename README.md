@@ -21,9 +21,9 @@ Download the JAR from [Releases]
 Clone the repository, then run `mvn install`.
 
 ## Installing
-Place the JAR in one of OmegaT's `plugins` directories (alongside `OmegaT.jar`,
-in the configuration directory, etc.). There is no configuration; the view will
-be active immediately.
+1. Place the JAR in one of OmegaT's `plugins` directories (alongside
+`OmegaT.jar`, in the configuration directory, etc.).
+2. Enable the view in `Options` > `Machine Translate` > `Markov Translator`.
 
 ## License
 This project is distributed under the [GNU General Public License, v3]

@@ -33,6 +33,7 @@ import org.omegat.core.events.IProjectEventListener;
 import org.omegat.gui.editor.autocompleter.AutoCompleterItem;
 import org.omegat.gui.editor.autocompleter.AutoCompleterListView;
 import org.omegat.tokenizer.ITokenizer;
+import org.omegat.util.Preferences;
 import org.omegat.util.Token;
 
 public class MarkovCompleter extends AutoCompleterListView {
@@ -170,4 +171,9 @@ public class MarkovCompleter extends AutoCompleterListView {
         return item.payload;
     }
 
+    @Override
+    public boolean shouldPopUp() {
+        return Preferences.isPreference(MarkovInstaller.MARKOV_TRANSLATOR_PREFERENCE)
+                && super.shouldPopUp();
+    }
 }
