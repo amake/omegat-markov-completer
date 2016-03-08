@@ -112,7 +112,7 @@ public class MarkovCompleter extends AutoCompleterListView {
     
     protected String getLastToken(String text) {
         ITokenizer tokenizer = getTokenizer();
-        Token[] tokens = tokenizer.tokenizeAllExactly(text);
+        Token[] tokens = tokenizer.tokenizeVerbatim(text);
         
         for (int i = tokens.length - 1; i >= 0; i--) {
             Token lastToken = tokens[i];

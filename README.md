@@ -11,7 +11,7 @@ also trained on new translations as they are added**.
 \*\*Changes to translations are ignored
 
 ## Requirements
-OmegaT 3.5 or newer (only tested on trunk)
+OmegaT 3.5.2_2 or newer (only tested on trunk)
 
 ## Obtaining
 Download the JAR from [Releases]
