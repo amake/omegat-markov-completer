@@ -11,7 +11,7 @@ also trained on new translations as they are added**.
 \*\*Changes to translations are ignored
 
 ## Requirements
-OmegaT 3.5.2_2 or newer (only tested on trunk)
+OmegaT 3.6.0 r8270 or later (only tested on trunk)
 
 ## Obtaining
 Download the JAR from [Releases]
@@ -23,7 +23,7 @@ Clone the repository, then run `mvn install`.
 ## Installing
 1. Place the JAR in one of OmegaT's `plugins` directories (alongside
 `OmegaT.jar`, in the configuration directory, etc.).
-2. Enable the view in `Options` > `Machine Translate` > `Markov Translator`.
+2. Enable the view in `Options` > `Auto-completion` > `Markov Completer`.
 
 ## License
 This project is distributed under the [GNU General Public License, v3]
