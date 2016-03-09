@@ -64,16 +64,9 @@
               <classpathPrefix>lib/</classpathPrefix>
             </manifest>
             <manifestEntries>
+              <OmegaT-Plugins>org.madlonkay.markov.MarkovInstaller</OmegaT-Plugins>
               <OmegaT-Plugin>True</OmegaT-Plugin>
             </manifestEntries>
-            <manifestSections>
-              <manifestSection>
-                <name>org.madlonkay.markov.MarkovInstaller</name>
-                <manifestEntries>
-			      <OmegaT-Plugin>MachineTranslator</OmegaT-Plugin>
-			    </manifestEntries>
-			  </manifestSection>
-            </manifestSections>
           </archive>
         </configuration>
       </plugin>

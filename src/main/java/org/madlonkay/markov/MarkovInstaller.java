@@ -17,31 +17,49 @@
 
 package org.madlonkay.markov;
 
-import org.omegat.core.Core;
-import org.omegat.core.machinetranslators.BaseTranslate;
-import org.omegat.util.Language;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class MarkovInstaller extends BaseTranslate {
+import javax.swing.AbstractButton;
+import javax.swing.JCheckBoxMenuItem;
+
+import org.omegat.core.Core;
+import org.omegat.core.CoreEvents;
+import org.omegat.core.events.IApplicationEventListener;
+import org.omegat.util.Preferences;
+
+public class MarkovInstaller {
     
     static final String MARKOV_TRANSLATOR_PREFERENCE = "allow_markov_translator";
+    static final String MENU_ITEM_TITLE = "Markov Completer";
 
-    public MarkovInstaller() {
+    public static void loadPlugins() {
+        CoreEvents.registerApplicationEventListener(new IApplicationEventListener() {
+            @Override
+            public void onApplicationStartup() {
+                install();
+            }
+
+            @Override
+            public void onApplicationShutdown() {
+            }
+        });
+    }
+
+    private static void install() {
         Core.getEditor().getAutoCompleter().addView(new MarkovCompleter());
-    }
-    
-    public String getName() {
-        return "Markov Translator";
+        JCheckBoxMenuItem item = new JCheckBoxMenuItem(MENU_ITEM_TITLE);
+        item.setSelected(Preferences.isPreference(MARKOV_TRANSLATOR_PREFERENCE));
+        item.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Preferences.setPreference(MARKOV_TRANSLATOR_PREFERENCE, ((AbstractButton) e.getSource()).isSelected());
+            }
+        });
+        Core.getMainWindow().getMainMenu().getAutoCompletionMenu().add(item);
     }
 
-    @Override
-    protected String getPreferenceName() {
-        return MARKOV_TRANSLATOR_PREFERENCE;
-    }
-
-    @Override
-    protected String translate(Language sLang, Language tLang, String text)
-            throws Exception {
-        return null;
+    public static void unloadPlugins() {
     }
 
 }
